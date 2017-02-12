@@ -169,12 +169,26 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumsController.cs" />
+    <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702112255599_InitialCreate.cs" />
+    <Compile Include="Migrations\201702112255599_InitialCreate.Designer.cs">
+      <DependentUpon>201702112255599_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702120103179_AddVideoChanges.cs" />
+    <Compile Include="Migrations\201702120103179_AddVideoChanges.Designer.cs">
+      <DependentUpon>201702120103179_AddVideoChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702120126057_ChangeArtistNameType.cs" />
+    <Compile Include="Migrations\201702120126057_ChangeArtistNameType.Designer.cs">
+      <DependentUpon>201702120126057_ChangeArtistNameType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artist.cs" />
@@ -250,6 +264,11 @@
     <Content Include="Views\Reviews\Details.cshtml" />
     <Content Include="Views\Reviews\Edit.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
+    <Content Include="Views\Artists\Create.cshtml" />
+    <Content Include="Views\Artists\Delete.cshtml" />
+    <Content Include="Views\Artists\Details.cshtml" />
+    <Content Include="Views\Artists\Edit.cshtml" />
+    <Content Include="Views\Artists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -261,6 +280,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201702112255599_InitialCreate.resx">
+      <DependentUpon>201702112255599_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702120103179_AddVideoChanges.resx">
+      <DependentUpon>201702120103179_AddVideoChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702120126057_ChangeArtistNameType.resx">
+      <DependentUpon>201702120126057_ChangeArtistNameType.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
